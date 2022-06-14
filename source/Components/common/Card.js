@@ -3,7 +3,6 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 const Card = ({height, width, title, icon, backgroundColor, onPress}) => {
-  console.log(icon, 'tjos is isco');
   return (
     <Pressable
       style={{

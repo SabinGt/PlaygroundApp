@@ -23,8 +23,7 @@ const Main = ({navigation}) => {
                 title={obj.title}
                 icon={obj.icon}
                 onPress={() => {
-                  navigation.navigate(obj.title);
-                  console.log(obj.icon, "sdfsdf")
+                  navigation.navigate(obj.title,{color: obj.background, icon:obj.icon, title:obj.title});
                 }}
               />
             ))}
