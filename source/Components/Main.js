@@ -21,8 +21,10 @@ const Main = ({navigation}) => {
                 height={obj.height}
                 width={obj.width}
                 title={obj.title}
+                icon={obj.icon}
                 onPress={() => {
                   navigation.navigate(obj.title);
+                  console.log(obj.icon, "sdfsdf")
                 }}
               />
             ))}
@@ -34,6 +36,7 @@ const Main = ({navigation}) => {
                 height={obj.height}
                 width={obj.width}
                 title={obj.title}
+                icon={obj.icon}
                 onPress={() => {
                   navigation.navigate(obj.title);
                 }}

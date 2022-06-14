@@ -1,13 +1,15 @@
-import {View, Text, Image, Pressable} from 'react-native';
+import {Text, Pressable,View} from 'react-native';
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 const Card = ({height, width, title, icon, backgroundColor, onPress}) => {
+  console.log(icon, 'tjos is isco');
   return (
     <Pressable
       style={{
         backgroundColor: backgroundColor,
         height: height,
-        width: width,
+        width: width, 
         borderRadius: 10,
         marginVertical: 8,
       }}
@@ -26,7 +28,12 @@ const Card = ({height, width, title, icon, backgroundColor, onPress}) => {
         }}>
         {title}
       </Text>
-      <Image source={icon}></Image>
+      <View style={{
+          alignItems:'center',
+          paddingTop:25
+      }}>
+        <FontAwesomeIcon icon={icon} size={60} />
+      </View>
     </Pressable>
   );
 };
