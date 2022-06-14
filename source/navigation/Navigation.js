@@ -12,6 +12,8 @@ import Textarea from '../Components/Textarea';
 import Toast from '../Components/Toast';
 import Avatar from '../Components/Avatar';
 import Alert from '../Components/Alert';
+import Image from '../Components/Image';
+import Input from '../Components/Input';
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -29,6 +31,8 @@ const Navigation = () => {
         <Stack.Screen name="Toast" component={Toast} />
         <Stack.Screen name="Avatar" component={Avatar} />
         <Stack.Screen name="Alert" component={Alert} />
+        <Stack.Screen name="Image" component={Image} />
+        <Stack.Screen name="Input" component={Input} />
       </Stack.Navigator>
     </NavigationContainer>
   );
