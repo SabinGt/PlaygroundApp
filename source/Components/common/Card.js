@@ -1,16 +1,17 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Pressable} from 'react-native';
 import React from 'react';
 
-const Card = ({height, width, title, icon, backgroundColor}) => {
+const Card = ({height, width, title, icon, backgroundColor, onPress}) => {
   return (
-    <View
+    <Pressable
       style={{
         backgroundColor: backgroundColor,
         height: height,
         width: width,
         borderRadius: 10,
         marginVertical: 8,
-      }}>
+      }}
+      onPress={onPress}>
       <Text
         style={{
           color: 'white',
@@ -26,7 +27,7 @@ const Card = ({height, width, title, icon, backgroundColor}) => {
         {title}
       </Text>
       <Image source={icon}></Image>
-    </View>
+    </Pressable>
   );
 };
 
