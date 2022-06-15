@@ -4,7 +4,7 @@ import Card from './common/Card';
 import {leftCardData} from '../Assets/Constant/cardData';
 import {rightCardData} from '../Assets/Constant/cardData';
 
-const Main = () => {
+const Main = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView>
@@ -21,6 +21,14 @@ const Main = () => {
                 height={obj.height}
                 width={obj.width}
                 title={obj.title}
+                icon={obj.icon}
+                onPress={() => {
+                  navigation.navigate(obj.title, {
+                    color: obj.background,
+                    icon: obj.icon,
+                    title: obj.title,
+                  });
+                }}
               />
             ))}
           </View>
@@ -31,6 +39,14 @@ const Main = () => {
                 height={obj.height}
                 width={obj.width}
                 title={obj.title}
+                icon={obj.icon}
+                onPress={() => {
+                  navigation.navigate(obj.title, {
+                    color: obj.background,
+                    icon: obj.icon,
+                    title: obj.title,
+                  });
+                }}
               />
             ))}
           </View>

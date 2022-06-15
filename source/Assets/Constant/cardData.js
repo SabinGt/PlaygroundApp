@@ -1,3 +1,15 @@
+import {faMugSaucer} from '@fortawesome/free-solid-svg-icons/faMugSaucer';
+import {faTextHeight} from '@fortawesome/free-solid-svg-icons';
+import {faMobileScreenButton} from '@fortawesome/free-solid-svg-icons';
+import {faPerson} from '@fortawesome/free-solid-svg-icons';
+import {faList} from '@fortawesome/free-solid-svg-icons';
+import {faBell} from '@fortawesome/free-solid-svg-icons';
+import {faCheck} from '@fortawesome/free-solid-svg-icons';
+import {faTengeSign} from '@fortawesome/free-solid-svg-icons';
+import {faIcons} from '@fortawesome/free-solid-svg-icons';
+import {faImage} from '@fortawesome/free-solid-svg-icons';
+import {faMobileAndroidAlt} from '@fortawesome/free-solid-svg-icons';
+import {faStoreAltSlash} from '@fortawesome/free-solid-svg-icons';
 const leftCardHeight = 180;
 const cardWidth = 180;
 const rightCardHeight = 190;
@@ -7,44 +19,43 @@ export const leftCardData = [
     width: cardWidth,
     background: 'red',
     title: 'Text',
-    icon: 'icon',
+    icon: faTextHeight,
   },
   {
     height: leftCardHeight,
     width: cardWidth,
     background: 'blue',
     title: 'Avatar',
-    icon: 'icon',
+    icon: faPerson,
   },
   {
     height: leftCardHeight,
     width: cardWidth,
     background: 'orange',
     title: 'Alert',
-    icon: 'icon',
+    icon: faBell,
   },
   {
     height: leftCardHeight,
     width: cardWidth,
-    background: 'orange',
+    background: 'grey',
     title: 'Input',
-    icon: 'icon',
+    icon: faTengeSign,
   },
   {
     height: leftCardHeight,
     width: cardWidth,
-    background: 'orange',
+    background: 'blue',
     title: 'Image',
-    icon: 'icon',
+    icon: faImage,
   },
   {
     height: leftCardHeight,
     width: cardWidth,
-    background: 'orange',
+    background: '#5f9ea0',
     title: 'Textarea',
-    icon: 'icon',
+    icon: faStoreAltSlash,
   },
-  
 ];
 
 export const rightCardData = [
@@ -53,41 +64,41 @@ export const rightCardData = [
     width: cardWidth,
     background: 'purple',
     title: 'Button',
-    icon: 'icon',
+    icon: faMobileScreenButton,
   },
   {
     height: rightCardHeight,
     width: cardWidth,
     background: 'green',
     title: 'Flatlist',
-    icon: 'icon',
+    icon: faList,
   },
   {
     height: rightCardHeight,
     width: cardWidth,
     background: 'pink',
     title: 'Checkbox',
-    icon: 'icon',
+    icon: faCheck,
   },
   {
     height: rightCardHeight,
     width: cardWidth,
-    background: 'pink',
+    background: 'saddlebrown',
     title: 'Icon',
-    icon: 'icon',
+    icon: faIcons,
   },
   {
     height: rightCardHeight,
     width: cardWidth,
-    background: 'pink',
+    background: 'cornflowerblue',
     title: 'Modal',
-    icon: 'icon',
+    icon: faMobileAndroidAlt,
   },
   {
     height: rightCardHeight,
     width: cardWidth,
-    background: 'pink',
+    background: 'darkcyan',
     title: 'Toast',
-    icon: 'icon',
+    icon: faMugSaucer,
   },
 ];
