@@ -1,11 +1,44 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text, Alert, Button} from 'react-native';
+import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
-
-const Alert = ({navigation, route}) => {
+const AlertDetails = ({navigation, route}) => {
   const {color, icon, title} = route.params;
-
+  const showAlert = () =>
+    Alert.alert(
+      'Demo Alert',
+      'Button with two buttons',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => Alert.alert('Cancel Pressed'),
+          style: 'cancel',
+        },
+      ],
+      {
+        cancelable: true,
+        onDismiss: () =>
+          Alert.alert(
+            'This alert was dismissed by tapping outside of the alert dialog.',
+          ),
+      },
+    );
+  const threeOptionAlert = () =>
+    Alert.alert(
+      'Three options',
+      ' This is three option alert',
+      [
+        {
+          text: 'May be',
+          onPress: () => {
+            console.log('Maybe Pressed');
+          },
+        },
+        {text: 'Yes', onPress: () => console.log('Yes Pressed')},
+        {text: 'No', onPress: () => console.log('OK Pressed')},
+      ],
+      {cancelable: true},
+    );
   return (
     <View>
       <View
@@ -27,8 +60,18 @@ const Alert = ({navigation, route}) => {
         </Text>
         <FontAwesomeIcon icon={icon} size={30}></FontAwesomeIcon>
       </View>
+      <View style={{
+        height:600,
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'space-around',
+        alignItems:'center'
+      }}>
+        <Button title="This is alert" onPress={showAlert} />
+        <Button title="Three option alert" onPress={threeOptionAlert} />
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default Alert
+export default AlertDetails;
