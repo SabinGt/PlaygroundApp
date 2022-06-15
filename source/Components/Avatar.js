@@ -1,14 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text} from 'react-native';
+import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-
 
 const Avatar = ({navigation, route}) => {
   const {color, icon, title} = route.params;
 
   return (
     <View>
-     <View
+      <View
         style={{
           display: 'flex',
           flexDirection: 'row',
@@ -27,8 +26,47 @@ const Avatar = ({navigation, route}) => {
         </Text>
         <FontAwesomeIcon icon={icon} size={30}></FontAwesomeIcon>
       </View>
+      <View
+        style={{
+          height: 600,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+        }}>
+        <View
+          style={{
+            backgroundColor: 'red',
+            height: 120,
+            width: 120,
+            borderRadius: 180 / 2,
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'space-around',
+          }}>
+          <Text
+            style={{
+              fontSize: 70,
+              color: 'white',
+            }}>
+            SG
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: 'red',
+            height: 120,
+            width: 120,
+            borderRadius: 180 / 2,
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'space-around',
+          }}>
+          <FontAwesomeIcon icon={icon} size={70}></FontAwesomeIcon>
+        </View>
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;
