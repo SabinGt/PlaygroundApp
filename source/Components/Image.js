@@ -1,8 +1,9 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text, Image} from 'react-native';
+import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import facebook from '../Assets/Constant/images/Facebook.png';
 
-const Image = ({navigation, route}) => {
+const ImageDetails = ({navigation, route}) => {
   const {color, icon, title} = route.params;
 
   return (
@@ -26,8 +27,26 @@ const Image = ({navigation, route}) => {
         </Text>
         <FontAwesomeIcon icon={icon} size={30}></FontAwesomeIcon>
       </View>
+      <View>
+        <Image
+          source={facebook}
+          style={{
+            width: 100,
+            height: 100,
+          }}
+        />
+        <Image
+          source={{
+            uri: 'https://res.cloudinary.com/dhkkb9wrz/image/upload/v1655033260/njmdibsdjqfp4el7tly0.jpg',
+          }}
+          style={{
+            width: 200,
+            height: 200,
+          }}
+        />
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default Image
+export default ImageDetails;
