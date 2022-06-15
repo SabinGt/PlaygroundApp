@@ -1,8 +1,10 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text,TextInput,StyleSheet } from 'react-native'
+import React,{useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 const InputDetails = ({navigation, route}) => {
+  const [text, onChangeText] =useState("Default Text");
+  const [number, onChangeNumber] = useState(null);
   const {color, icon, title} = route.params;
 
   return (
@@ -26,8 +28,32 @@ const InputDetails = ({navigation, route}) => {
         </Text>
         <FontAwesomeIcon icon={icon} size={30}></FontAwesomeIcon>
       </View>
+      <View>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+        numberOfLines={5}
+        autoCapitalize='characters'
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Numberic Input Text"
+        keyboardType="numeric"
+      />
+      </View>
     </View>
   )
 }
 
-export default InputDetails
+export default InputDetails;
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
