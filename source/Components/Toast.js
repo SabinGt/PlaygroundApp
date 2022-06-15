@@ -1,10 +1,17 @@
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import Toast from 'react-native-toast-message';
 
-const Toast = ({navigation,route}) => {
+const ToastDetails = ({navigation, route}) => {
   const {color, icon, title} = route.params;
-
+  const showToast = () => {
+    Toast.show({
+      type: 'success',
+      text1: 'Hello',
+      text2: 'This is some something 👋',
+    });
+  };
   return (
     <View>
       <View
@@ -26,8 +33,12 @@ const Toast = ({navigation,route}) => {
         </Text>
         <FontAwesomeIcon icon={icon} size={30}></FontAwesomeIcon>
       </View>
+      <View>
+        <Button title="Show toast" onPress={showToast} />
+        <Toast />
+      </View>
     </View>
   );
 };
 
-export default Toast;
+export default ToastDetails;
